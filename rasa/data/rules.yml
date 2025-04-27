@@ -1,0 +1,6 @@
+version: "3.1"
+rules:
+- rule: обрабатывать не в пределах
+  steps:
+  - intent: out_of_scope
+  - action: utter_default_fallback

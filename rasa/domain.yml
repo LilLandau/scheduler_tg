@@ -1,0 +1,41 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+  - create_reminder
+  - create_note
+  - chitchat
+  - out_of_scope
+
+responses:
+  utter_greet:
+    - text: "Привет! Чем могу помочь?"
+
+  utter_goodbye:
+    - text: "Пока! Обращайся."
+
+  utter_iamabot:
+    - text: "Я бот, работаю на Rasa."
+
+  utter_reminder_created:
+    - text: "Напоминание создано! 😊"
+
+  utter_note_created:
+    - text: "Заметка сохранена."
+
+  utter_chitchat:
+    - text: "Давай поболтаем! О чём хочешь?"
+
+  utter_default_fallback:
+    - text: "Извини, я тебя не понял. Попробуй переформулировать."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

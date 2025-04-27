@@ -1,0 +1,16 @@
+version: "3.1"
+stories:
+- story: создание напоминания
+  steps:
+  - intent: create_reminder
+  - action: utter_reminder_created
+
+- story: создание заметки
+  steps:
+  - intent: create_note
+  - action: utter_note_created
+
+- story: простой чат
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat

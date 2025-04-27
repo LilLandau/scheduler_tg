@@ -1,0 +1,24 @@
+services:
+  bot:
+    build:
+      context: ./bot
+      dockerfile: dockerfile.bot
+    container_name: telegram_bot
+    env_file:
+      - .env
+    environment:
+      - RASA_URL=http://rasa:5005
+    ports:
+      - "8001:8001"  
+    restart: unless-stopped
+  rasa:
+    build:
+      context: ./rasa
+      dockerfile: dockerfile.rasa
+    container_name: rasa_server
+    user: root    
+    ports:
+      - "5005:5005"  
+    volumes:
+      - ./rasa/models:/app/models 
+    restart: unless-stopped

@@ -1,0 +1,7 @@
+FROM rasa/rasa:3.6.21-full
+
+WORKDIR /app
+COPY config.yml credentials.yml domain.yml endpoints.yml /app/
+COPY data /app/data
+
+CMD ["run", "--enable-api", "--cors", "*", "--debug"]

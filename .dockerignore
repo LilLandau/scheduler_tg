@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+.rasa/
+models/
+*.log
+venv/
+venv_bot/
+test_data/
+tests/
+.DS_Store
+*.env
